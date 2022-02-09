@@ -1,24 +1,57 @@
-import logo from './logo.svg';
-import './App.css';
+import { Box, Heading, Button, Flex, Stack } from "@chakra-ui/react";
+import largeImage from "./img/wepik-202218-171717.png";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <Box
+      h="40vh"
+      bg="gray"
+      bgImage={`url(${largeImage})`}
+      bgRepeat="no-repeat"
+      bgSize="cover"
+    >
+      <Flex
+        direction="column"
+        alignItems="center"
+        justify="center"
+        h="full"
+        bg="rgb(0 0 0 / 40%)"
+      >
+        <Heading
+          color="white"
+          textTransform="uppercase"
+          fontWeight="thin"
+          textAlign="center"
+          letterSpacing={"5px"}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          Domina el terreno
+        </Heading>
+        <Stack direction="row" spacing={4}>
+          <Button
+            variant="outline"
+            size={"lg"}
+            textTransform={"uppercase"}
+            fontWeight={"light"}
+            color="white"
+            borderRadius={0}
+            letterSpacing={'1px'}
+          >
+            Ver detalles
+          </Button>
+          <Button
+            variant="outline"
+            size={"lg"}
+            textTransform={"uppercase"}
+            fontWeight={"light"}
+            color="white"
+            borderRadius={0}
+            letterSpacing={'1px'}
+          >
+            Ver video
+          </Button>
+        </Stack>
+      </Flex>
+    </Box>
   );
 }
 
